@@ -67,6 +67,111 @@
 
 ---
 
+## Distributor Portal (Authenticated)
+
+### Main Dashboard
+```
+/distributor
+├── /distributor/dashboard
+│   ├── Regional overview
+│   ├── Sales by manufacturer
+│   ├── Inventory by location
+│   ├── Performance metrics
+│   └── Quick actions
+```
+
+### Manufacturer Management
+```
+/distributor/manufacturers
+├── /distributor/manufacturers/assigned
+├── /distributor/manufacturers/{manufacturer-id}
+│   ├── Product access control
+│   ├── Pricing agreements
+│   ├── Volume commitments
+│   └── Performance metrics
+```
+
+### Regional Inventory
+```
+/distributor/inventory
+├── /distributor/inventory/warehouses
+│   ├── /distributor/inventory/warehouses/{warehouse-id}
+│   │   ├── Stock levels
+│   │   ├── Incoming shipments
+│   │   ├── Low stock alerts
+│   │   └── Restock planning
+├── /distributor/inventory/stock-allocation
+└── /distributor/inventory/shipment-tracking
+```
+
+### Order Management
+```
+/distributor/orders
+├── /distributor/orders/from-retailers
+├── /distributor/orders/to-manufacturers
+├── /distributor/orders/{order-id}
+│   ├── Order details
+│   ├── Inventory allocation
+│   ├── Shipping coordination
+│   └── Communication
+└── /distributor/orders/recurring
+```
+
+### Contracts & Agreements
+```
+/distributor/contracts
+├── /distributor/contracts/with-manufacturers
+├── /distributor/contracts/with-retailers
+├── /distributor/contracts/{contract-id}
+│   ├── Terms & conditions
+│   ├── Volume commitments
+│   ├── Pricing tiers
+│   └── Expiration tracking
+└── /distributor/contracts/templates
+```
+
+### Regional Analytics
+```
+/distributor/analytics
+├── /distributor/analytics/sales-by-region
+├── /distributor/analytics/customer-segments
+├── /distributor/analytics/delivery-performance
+├── /distributor/analytics/market-trends
+└── /distributor/analytics/custom-reports
+```
+
+### Financial Management
+```
+/distributor/financial
+├── /distributor/financial/overview
+├── /distributor/financial/revenue-by-manufacturer
+├── /distributor/financial/receivables
+├── /distributor/financial/payables
+├── /distributor/financial/commissions
+└── /distributor/financial/settlements
+```
+
+### Delivery Coordination
+```
+/distributor/logistics
+├── /distributor/logistics/active-shipments
+├── /distributor/logistics/delivery-routes
+├── /distributor/logistics/proof-of-delivery
+└── /distributor/logistics/carrier-management
+```
+
+### Settings
+```
+/distributor/settings
+├── /distributor/settings/region-info
+├── /distributor/settings/warehouses
+├── /distributor/settings/team-members
+├── /distributor/settings/payment-methods
+└── /distributor/settings/api-integration
+```
+
+---
+
 ## Retailer Portal (Authenticated)
 
 ### Main Dashboard
@@ -146,7 +251,57 @@
 └── /retailer/settings/security
 ```
 
-### Support
+### Contracts & Deals
+```
+/retailer/contracts
+├── /retailer/contracts/active
+├── /retailer/contracts/{contract-id}
+│   ├── Terms & conditions
+│   ├── Volume commitments
+│   ├── Pricing agreements
+│   └── Renewal reminders
+└── /retailer/contracts/negotiation
+```
+
+### Communication & Negotiation
+```
+/retailer/communication
+├── /retailer/communication/inbox
+├── /retailer/communication/conversations
+│   ├── /retailer/communication/conversations/{conversation-id}
+│   │   ├── Messages
+│   │   ├── Shared documents
+│   │   └── Negotiation history
+├── /retailer/communication/rfq
+│   ├── /retailer/communication/rfq/sent
+│   ├── /retailer/communication/rfq/received
+│   └── /retailer/communication/rfq/{rfq-id}
+└── /retailer/communication/file-sharing
+```
+
+### Credit & Deferred Payments
+```
+/retailer/credit
+├── /retailer/credit/credit-limit
+├── /retailer/credit/credit-score
+├── /retailer/credit/deferred-payments
+│   ├── Active payment plans
+│   ├── Payment history
+│   └── Upcoming payments
+└── /retailer/credit/credit-requests
+```
+
+### Price Intelligence
+```
+/retailer/price-intelligence
+├── /retailer/price-intelligence/price-comparison
+├── /retailer/price-intelligence/price-history
+├── /retailer/price-intelligence/market-trends
+├── /retailer/price-intelligence/price-alerts
+└── /retailer/price-intelligence/recommended-deals
+```
+
+### Support & Disputes
 ```
 /retailer/support
 ├── /retailer/support/tickets
@@ -255,6 +410,72 @@
 ├── /manufacturer/compliance/documents
 ├── /manufacturer/compliance/verification-status
 └── /manufacturer/compliance/upload
+```
+
+### Contracts & Deals
+```
+/manufacturer/contracts
+├── /manufacturer/contracts/active
+├── /manufacturer/contracts/{contract-id}
+│   ├── Terms & conditions
+│   ├── Volume commitments
+│   ├── Price tiers
+│   └── Expiration tracking
+├── /manufacturer/contracts/templates
+└── /manufacturer/contracts/draft
+```
+
+### Communication & Negotiation
+```
+/manufacturer/communication
+├── /manufacturer/communication/inbox
+├── /manufacturer/communication/conversations
+│   ├── /manufacturer/communication/conversations/{conversation-id}
+│   │   ├── Messages
+│   │   ├── Attached documents
+│   │   └── Negotiation timeline
+├── /manufacturer/communication/rfq
+│   ├── Received RFQs
+│   ├── RFQ Responses
+│   └── /manufacturer/communication/rfq/{rfq-id}
+└── /manufacturer/communication/document-library
+```
+
+### Warehouse & Stock Hub
+```
+/manufacturer/warehouse
+├── /manufacturer/warehouse/overview
+├── /manufacturer/warehouse/locations
+│   ├── /manufacturer/warehouse/locations/{warehouse-id}
+│   │   ├── Stock levels (real-time)
+│   │   ├── Stock movements
+│   │   ├── Batch tracking
+│   │   └── Serial number tracking
+├── /manufacturer/warehouse/stock-allocation
+├── /manufacturer/warehouse/batch-management
+└── /manufacturer/warehouse/low-stock-alerts
+```
+
+### Demand Forecasting
+```
+/manufacturer/forecasting
+├── /manufacturer/forecasting/dashboard
+├── /manufacturer/forecasting/sales-trends
+├── /manufacturer/forecasting/seasonal-analysis
+├── /manufacturer/forecasting/retail-signals
+├── /manufacturer/forecasting/production-planning
+└── /manufacturer/forecasting/smart-recommendations
+```
+
+### Price Intelligence & Dynamic Pricing
+```
+/manufacturer/pricing
+├── /manufacturer/pricing/price-history
+├── /manufacturer/pricing/competitive-analysis
+├── /manufacturer/pricing/market-trends
+├── /manufacturer/pricing/dynamic-pricing-rules
+├── /manufacturer/pricing/discount-engine
+└── /manufacturer/pricing/promotion-management
 ```
 
 ### Settings
@@ -444,19 +665,55 @@
 ## Total Page Count Estimate
 
 - **Public Pages**: ~25 pages
-- **Retailer Portal**: ~45 pages
-- **Manufacturer Portal**: ~50 pages
+- **Retailer Portal**: ~65 pages (including new modules)
+- **Manufacturer Portal**: ~70 pages (including new modules)
+- **Distributor Portal**: ~55 pages (NEW)
 - **Admin Portal**: ~60 pages
 
-**Total Unique Pages/Views**: ~180 distinct pages/views
+**Total Unique Pages/Views**: ~275 distinct pages/views
 
 ---
 
 ## Navigation Hierarchy Summary
 
 1. **Public Site** - Marketing, discovery, authentication
-2. **Retailer Portal** - Buying experience, order management, analytics
-3. **Manufacturer Portal** - Selling tools, production management, customer relations
-4. **Admin Portal** - Platform governance, monitoring, configuration
+2. **Retailer Portal** - Buying experience, order management, contracts, communication, credit, price intelligence, analytics
+3. **Manufacturer Portal** - Selling tools, production management, warehouse management, demand forecasting, price intelligence, customer relations, contracts, communication
+4. **Distributor Portal** (NEW) - Regional management, manufacturer relationships, warehouse coordination, order aggregation, local analytics
+5. **Admin Portal** - Platform governance, monitoring, configuration, user management
 
 Each portal has its own navigation structure optimized for role-specific workflows.
+
+---
+
+## Key Additions in This Update
+
+### New Distributor Portal
+- Regional inventory management across multiple warehouses
+- Manufacturer relationship and access control
+- Contract and agreement management with manufacturers and retailers
+- Regional analytics and performance tracking
+- Order aggregation from both retailers and manufacturers
+- Delivery coordination and logistics management
+
+### Enhanced Retailer Portal
+- Contract & deal management with expiration alerts
+- Communication & negotiation tools with RFQ system
+- Credit & deferred payment management
+- Price intelligence and market comparison tools
+- Demand-based purchasing recommendations
+
+### Enhanced Manufacturer Portal
+- Warehouse & stock hub with batch and serial tracking
+- AI-powered demand forecasting and production planning
+- Dynamic pricing and price optimization tools
+- Contract and agreement management
+- Built-in communication and RFQ response system
+- Regional pricing management for distributors
+
+### New Shared Modules (All Portals)
+- Contract management system
+- Real-time communication & negotiation
+- Document sharing and collaboration
+- Price tracking and market intelligence
+- Inventory visibility and management

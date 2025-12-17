@@ -124,36 +124,42 @@ Year 3: $6.5M revenue, $100M GMV (Profitable)
 
 ```
 /docs
-├── GETTING_STARTED.md              # Start here!
-├── SITEMAP.md                       # Complete site structure
+├── GETTING_STARTED.md                      # Start here!
+├── SITEMAP.md                              # Complete site structure (~275 pages)
+├── PRODUCT_SPECIFICATION.md                # Comprehensive product spec (NEW)
+├── FEATURE_PRIORITIZATION.md               # MVP → Phase 4 roadmap (NEW)
+├── IMPLEMENTATION_ROADMAP.md               # Phase-by-phase execution plan (NEW)
+├── SCALABILITY_AND_GROWTH_STRATEGY.md      # Growth & scaling strategy (NEW)
 │
 ├── /architecture
-│   ├── SYSTEM_ARCHITECTURE.md      # Technical architecture
-│   └── SCALABILITY_ROADMAP.md      # Scaling strategy
+│   ├── SYSTEM_ARCHITECTURE.md              # Technical architecture
+│   └── SCALABILITY_ROADMAP.md              # Infrastructure scaling
 │
 ├── /database
-│   └── DATABASE_SCHEMA.md          # Complete DB schema
+│   └── DATABASE_SCHEMA.md                  # Complete DB schema
 │
 ├── /features
-│   └── FEATURE_SPECIFICATIONS.md   # Detailed features
+│   └── FEATURE_SPECIFICATIONS.md           # Detailed features (includes new modules)
 │
 ├── /user-flows
-│   └── USER_JOURNEYS.md            # User flows
+│   ├── USER_JOURNEYS.md                    # Original user flows
+│   └── UX_FLOW_DIAGRAMS.md                 # Complete UX flows (NEW)
 │
 ├── /ui-ux
-│   └── DESIGN_SYSTEM.md            # Design guidelines
+│   ├── DESIGN_SYSTEM.md                    # Design guidelines
+│   └── UI_COMPONENT_LIBRARY.md             # Component specifications (NEW)
 │
 ├── /api
-│   └── API_SPECIFICATIONS.md       # API docs
+│   └── API_SPECIFICATIONS.md               # API docs
 │
 ├── /monetization
-│   └── BUSINESS_MODEL.md           # Business strategy
+│   └── BUSINESS_MODEL.md                   # Business strategy (includes distributor model)
 │
 ├── /deployment
-│   └── DEPLOYMENT_GUIDE.md         # Infrastructure
+│   └── DEPLOYMENT_GUIDE.md                 # Infrastructure
 │
 └── /security
-    └── SECURITY_SPECIFICATIONS.md  # Security standards
+    └── SECURITY_SPECIFICATIONS.md          # Security standards
 ```
 
 ---
