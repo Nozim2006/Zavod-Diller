@@ -1,217 +1,57 @@
-# B2B Wholesale Distribution Platform - .gitignore
-
-# Environment Variables
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-.env*.local
-
 # Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-venv/
-ENV/
-env/
-.venv
-pip-log.txt
-pip-delete-this-directory.txt
-*.egg-info/
-dist/
-build/
-
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-*.sublime-project
-*.sublime-workspace
-.project
-.classpath
-.settings/
-
-# Next.js
-.next/
-out/
-build/
-dist/
+/node_modules
+/.pnp
+.pnp.js
 
 # Testing
-coverage/
-*.lcov
-.nyc_output
-junit.xml
-test-results/
+/coverage
 
-# Logs
-logs/
-*.log
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+/dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-lerna-debug.log*
-pids
-*.pid
-*.seed
-*.pid.lock
 
-# OS
-.DS_Store
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-
-# Temporary files
-*.tmp
-*.temp
-tmp/
-temp/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-*.sql
-
-# Secrets and Certificates
-*.pem
-*.key
-*.cert
-*.crt
-secrets.yml
-credentials.yml
-
-# Docker
-.dockerignore
-
-# Build artifacts
-*.tgz
-*.tar.gz
-
-# Backup files
-*.bak
-*.backup
-*~
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# Compiled binary addons
-build/Release
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional stylelint cache
-.stylelintcache
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional REPL history
-.node_repl_history
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# parcel-bundler cache
-.cache
-.parcel-cache
-
-# Next.js build output
-.next
-out
-
-# Nuxt.js build / generate output
-.nuxt
-dist
-
-# Gatsby files
-.cache/
-public
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
-
-# Terraform
-*.tfstate
-*.tfstate.*
-.terraform/
-.terraform.lock.hcl
-
-# Kubernetes
-kubeconfig
-*.kubeconfig
-
-# Local development
-.local/
-
-# Generated documentation
-docs/_build/
-site/
-
-# AWS
-.aws/
-aws-exports.js
-
-# Firebase
-.firebase/
-firebase-debug.log
+# Local env files
+.env*.local
+.env
 
 # Vercel
 .vercel
 
-# Turbo
-.turbo
+# Typescript
+*.tsbuildinfo
+next-env.d.ts
 
-# Misc
-*.orig
+# MkDocs (old Python documentation system)
+mkdocs.yml
+/site/
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+
+# Log files
+*.log
