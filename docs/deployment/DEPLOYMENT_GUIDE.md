@@ -11,7 +11,7 @@ This guide covers infrastructure setup, deployment strategies, and operational p
 2. [Environment Setup](#environment-setup)
 3. [Docker Configuration](#docker-configuration)
 4. [Kubernetes Deployment](#kubernetes-deployment)
-5. [CI/CD Pipeline](#cicd-pipeline)
+5. [CI/CD Pipeline](#ci-cd-pipeline)
 6. [Monitoring & Logging](#monitoring-logging)
 7. [Backup & Recovery](#backup-recovery)
 8. [Scaling Strategy](#scaling-strategy)
@@ -20,7 +20,7 @@ This guide covers infrastructure setup, deployment strategies, and operational p
 
 ---
 
-## 1. INFRASTRUCTURE OVERVIEW
+## INFRASTRUCTURE OVERVIEW
 
 ### Architecture Components
 
@@ -77,7 +77,7 @@ This guide covers infrastructure setup, deployment strategies, and operational p
 
 ---
 
-## 2. ENVIRONMENT SETUP
+## ENVIRONMENT SETUP
 
 ### Environments
 
@@ -159,7 +159,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS=GA-XXXXXXX
 
 ---
 
-## 3. DOCKER CONFIGURATION
+## DOCKER CONFIGURATION
 
 ### Dockerfile (Backend - Node.js)
 
@@ -294,7 +294,7 @@ volumes:
 
 ---
 
-## 4. KUBERNETES DEPLOYMENT
+## KUBERNETES DEPLOYMENT
 
 ### Namespace
 
@@ -495,7 +495,7 @@ spec:
 
 ---
 
-## 5. CI/CD PIPELINE
+## CI CD PIPELINE
 
 ### GitHub Actions Workflow
 
@@ -589,7 +589,7 @@ jobs:
 
 ---
 
-## 6. MONITORING & LOGGING
+## MONITORING & LOGGING
 
 ### Prometheus Configuration
 
@@ -676,7 +676,7 @@ groups:
 
 ---
 
-## 7. BACKUP & RECOVERY
+## BACKUP & RECOVERY
 
 ### Database Backup Strategy
 
@@ -730,7 +730,7 @@ kubectl set image deployment/backend backend=<ECR_REPO>/backend:v1.2.3 -n b2b-pl
 
 ---
 
-## 8. SCALING STRATEGY
+## SCALING STRATEGY
 
 ### Vertical Scaling
 
@@ -775,7 +775,7 @@ kubectl set image deployment/backend backend=<ECR_REPO>/backend:v1.2.3 -n b2b-pl
 
 ---
 
-## 9. SECURITY HARDENING
+## SECURITY HARDENING
 
 ### Network Security
 
@@ -832,7 +832,7 @@ spec:
 
 ---
 
-## 10. TROUBLESHOOTING
+## TROUBLESHOOTING
 
 ### Common Issues
 

@@ -72,7 +72,43 @@ This repository contains the complete architecture, design specifications, and i
 
 ## Getting Started
 
-Refer to `/docs/getting-started.md` for detailed setup instructions.
+- Documentation entry point: [`docs/GETTING_STARTED.md`](docs/GETTING_STARTED.md)
+
+## Running the documentation site (local)
+
+This repository currently contains **specifications and documentation** (not the actual application code yet). If you want to view the docs as a website locally, you can serve them with **MkDocs**.
+
+### Requirements
+- Python 3.10+
+- pip
+
+### Run
+```bash
+# (optional) create & activate a virtualenv
+python3 -m venv .venv
+source .venv/bin/activate
+
+pip install mkdocs
+mkdocs serve
+```
+Open: http://127.0.0.1:8000
+
+### Build (static)
+```bash
+mkdocs build
+```
+The static site will be generated into `site/`.
+
+### Deploy (static hosting)
+
+**GitHub Pages** (recommended):
+```bash
+mkdocs gh-deploy --force
+```
+
+**Any static host** (Netlify/Vercel/S3/etc.):
+1. Run `mkdocs build`
+2. Upload the generated `site/` directory
 
 ## Project Status
 

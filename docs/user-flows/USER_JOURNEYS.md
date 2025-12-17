@@ -8,7 +8,7 @@
 
 ---
 
-## 1. RETAILER JOURNEYS
+## RETAILER JOURNEYS
 
 ### Journey 1.1: New Retailer Onboarding
 
@@ -254,7 +254,7 @@ Dashboard
 
 ---
 
-## 2. MANUFACTURER JOURNEYS
+## MANUFACTURER JOURNEYS
 
 ### Journey 2.1: Manufacturer Onboarding
 
@@ -551,7 +551,7 @@ PRODUCT LIFECYCLE MANAGEMENT
 
 ---
 
-## 3. ADMIN JOURNEYS
+## ADMIN JOURNEYS
 
 ### Journey 3.1: User Verification Process
 
@@ -660,7 +660,7 @@ DISPUTE MANAGEMENT
 
 ---
 
-## 4. CRITICAL USER FLOWS
+## CRITICAL USER FLOWS
 
 ### Flow 4.1: First Order Experience (Retailer)
 
