@@ -10,32 +10,56 @@ This repository contains the complete architecture, design specifications, and i
 
 ## Documentation Structure
 
+### Core Documents
+- `PROJECT_SUMMARY.md` - Executive overview and quick reference
+- `PRODUCT_SPECIFICATION.md` - **NEW** Comprehensive product specification with all modules
+- `SITEMAP.md` - Complete site structure (~275 pages, including NEW Distributor portal)
+- `FEATURE_PRIORITIZATION.md` - **NEW** MVP to Phase 4 feature roadmap with scoring
+- `SCALABILITY_AND_GROWTH_STRATEGY.md` - **NEW** Growth strategy and scaling roadmap
+
+### Technical Documentation
 - `/docs/architecture/` - System architecture and technical design
-- `/docs/features/` - Detailed feature specifications
-- `/docs/user-flows/` - User journey and flow diagrams
-- `/docs/ui-ux/` - UI/UX design guidelines and wireframes
+- `/docs/architecture/SCALABILITY_ROADMAP.md` - Infrastructure scaling strategy
+- `/docs/features/` - Detailed feature specifications including new modules
+- `/docs/user-flows/UX_FLOW_DIAGRAMS.md` - **NEW** Complete UX flows for all user types
+- `/docs/ui-ux/DESIGN_SYSTEM.md` - UI/UX design guidelines
+- `/docs/ui-ux/UI_COMPONENT_LIBRARY.md` - **NEW** Complete component library documentation
 - `/docs/api/` - API specifications and contracts
 - `/docs/database/` - Database schema and data models
 - `/docs/deployment/` - Deployment and infrastructure guides
 - `/docs/security/` - Security and compliance specifications
-- `/docs/monetization/` - Business model and monetization strategy
+
+### Business Documentation
+- `/docs/monetization/BUSINESS_MODEL.md` - Monetization strategy including NEW distributor model
+- `/docs/GETTING_STARTED.md` - Implementation quick start guide
 
 ## Core Stakeholders
 
-1. **Manufacturers/Factories** - List products, manage inventory, process orders
-2. **Retailers/Shop Owners** - Browse products, place bulk orders, track shipments
-3. **Platform Admin** - Manage users, monitor transactions, resolve disputes
+1. **Manufacturers/Factories** - List products, manage inventory, process orders, forecast demand
+2. **Retailers/Shop Owners** - Browse products, place bulk orders, track shipments, manage credit
+3. **Distributors (NEW)** - Manage regional inventory, aggregate orders, coordinate delivery, build networks
+4. **Platform Admin** - Manage users, monitor transactions, resolve disputes, ensure compliance
 
 ## Key Features
 
-- Multi-role authentication and authorization
-- Product catalog with bulk management
-- Advanced order management system
-- Payment processing with escrow support
+### Core Features
+- Multi-role authentication and authorization (Manufacturer, Retailer, Distributor, Admin)
+- Product catalog with bulk management and MOQ controls
+- Advanced order management system with multi-supplier support
+- Payment processing with escrow and credit system support
 - Logistics and shipment tracking
 - Real-time analytics and reporting
-- Trust and verification system
+- Trust and verification system (KYC/KYB)
 - Multi-language and multi-currency support
+
+### Advanced Modules (NEW)
+- Contract & Deal Management with digital signatures
+- Price Intelligence System with market comparison
+- Warehouse & Stock Hub with multi-location support
+- AI-powered Demand Forecasting for production planning
+- Business Credit System with automated scoring
+- Built-in Communication & Negotiation with RFQ system
+- Regional distributor network management
 
 ## Technology Stack Recommendations
 

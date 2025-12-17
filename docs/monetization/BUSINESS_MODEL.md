@@ -84,6 +84,33 @@
 - Insurance
 - Analytics premium features
 
+### Distributor Commission Revenue (NEW - 15% of revenue at scale)
+
+**How It Works**:
+- Distributors aggregate retailer orders
+- Distributors negotiate better rates from manufacturers
+- Platform takes commission on distributor-orchestrated transactions
+- Distributors earn margin between manufacturer and retailer pricing
+
+**Revenue Model**:
+- Platform commission: 1.5-2% on distributor transactions (lower than direct)
+- Incentivizes distributor growth and regional network expansion
+- Creates new revenue stream from same GMV
+
+**Example**:
+```
+Retailer wants 1000 units @ $10/unit = $10,000 order
+
+Direct (current model):
+Platform commission (4%): $400
+
+Distributor Model (new):
+Retailer orders 1000 @ $11/unit through distributor: $11,000
+Distributor buys 3000 units @ $9/unit from manufacturer: $27,000
+Platform commission on $27,000 (2%): $540
+Distributor margin: $1,000 + $540 = 1.83% + distributor revenue
+```
+
 ### Secondary Revenue Opportunities
 
 - **API Access Fees**: For third-party integrations
@@ -91,6 +118,10 @@
 - **Data Analytics**: Anonymized market insights
 - **Training & Consulting**: Platform optimization services
 - **Payment Float**: Interest on held escrow funds
+- **Logistics Services**: Handling fulfillment for a fee
+- **Quality Inspection**: Third-party verification services
+- **Trade Credit Insurance**: Protecting sellers from defaults
+- **Premium Support**: Concierge for enterprise customers
 
 ---
 
@@ -583,29 +614,39 @@ Profit Margin: 35.5% ✅
 
 ## Financial Goals
 
-### Year 1
+### Year 1 (MVP & Initial Launch)
 - **Revenue**: $280K
 - **GMV**: $5M
 - **Break-even**: No (expected)
 - **Funding need**: $500K seed round
+- **Direct transactions**: 100% of GMV
+- **Distributor transactions**: 0%
 
-### Year 2
-- **Revenue**: $1.85M
-- **GMV**: $30M
+### Year 2 (Growth Phase)
+- **Revenue**: $2.1M (15% increase from distributors)
+- **GMV**: $35M
 - **Break-even**: Month 18-20
 - **Funding**: Series A ($3-5M) if needed
+- **Direct transactions**: 80% of GMV
+- **Distributor transactions**: 20% of GMV ($7M)
 
-### Year 3
-- **Revenue**: $6.5M
-- **GMV**: $100M
+### Year 3 (Scale Phase)
+- **Revenue**: $7.5M (15% increase from distributors)
+- **GMV**: $120M
 - **Profitability**: Yes
-- **EBITDA Margin**: 20%+
+- **EBITDA Margin**: 22%+
+- **Direct transactions**: 65% of GMV ($78M)
+- **Distributor transactions**: 35% of GMV ($42M)
 
-### Year 5 (Aspirational)
-- **Revenue**: $25M+
-- **GMV**: $500M+
+### Year 5 (Market Leadership)
+- **Revenue**: $30M+
+- **GMV**: $650M+
 - **Market Position**: Top 3 in category
 - **Exit Options**: Acquisition or IPO ready
+- **Direct transactions**: 55% of GMV ($357M)
+- **Distributor transactions**: 45% of GMV ($293M)
+
+**Note**: Distributor transactions grow faster as network effects take hold and regional networks mature.
 
 ---
 
