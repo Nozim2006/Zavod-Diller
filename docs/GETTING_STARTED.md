@@ -18,7 +18,7 @@ This guide will help you understand and work with the B2B Wholesale Distribution
 
 ---
 
-## 1. PROJECT OVERVIEW
+## PROJECT OVERVIEW
 
 ### What is This Platform?
 
@@ -52,18 +52,20 @@ A **B2B wholesale distribution web platform** that connects:
 
 ---
 
-## 2. DOCUMENTATION STRUCTURE
+## DOCUMENTATION STRUCTURE
 
 ### Architecture Documentation
 
 ```
 /docs
-├── README.md                           # This file
+├── GETTING_STARTED.md                  # This file
 ├── SITEMAP.md                          # Complete site structure
-├── GETTING_STARTED.md                  # Getting started guide
+├── ENTERPRISE_PRODUCT_SPEC.md          # Full enterprise product spec
+├── ENTERPRISE_ROADMAP.md               # Product roadmap
 │
 ├── /architecture
-│   └── SYSTEM_ARCHITECTURE.md          # Technical architecture
+│   ├── SYSTEM_ARCHITECTURE.md          # Technical architecture
+│   └── SCALABILITY_ROADMAP.md          # Scaling strategy
 │
 ├── /database
 │   └── DATABASE_SCHEMA.md              # Database design
@@ -72,10 +74,12 @@ A **B2B wholesale distribution web platform** that connects:
 │   └── FEATURE_SPECIFICATIONS.md       # Detailed features
 │
 ├── /user-flows
-│   └── USER_JOURNEYS.md                # User flows and journeys
+│   ├── USER_JOURNEYS.md                # User flows and journeys
+│   └── ENTERPRISE_UX_FLOWS.md          # Expanded UX flows
 │
 ├── /ui-ux
-│   └── DESIGN_SYSTEM.md                # UI/UX design system
+│   ├── DESIGN_SYSTEM.md                # UI/UX design system
+│   └── ENTERPRISE_UI_SYSTEM.md         # Expanded enterprise UI system
 │
 ├── /api
 │   └── API_SPECIFICATIONS.md           # API documentation
@@ -149,7 +153,7 @@ A **B2B wholesale distribution web platform** that connects:
 
 ---
 
-## 3. FOR DEVELOPERS
+## FOR DEVELOPERS
 
 ### Recommended Reading Order
 
@@ -247,7 +251,7 @@ npm run dev
 
 ---
 
-## 4. FOR DESIGNERS
+## FOR DESIGNERS
 
 ### Recommended Reading Order
 
@@ -324,7 +328,7 @@ Design System
 
 ---
 
-## 5. FOR PRODUCT MANAGERS
+## FOR PRODUCT MANAGERS
 
 ### Recommended Reading Order
 
@@ -422,7 +426,7 @@ Design System
 
 ---
 
-## 6. FOR BUSINESS STAKEHOLDERS
+## FOR BUSINESS STAKEHOLDERS
 
 ### Recommended Reading Order
 
@@ -510,7 +514,7 @@ Year 3:
 
 ---
 
-## 7. DEVELOPMENT ROADMAP
+## DEVELOPMENT ROADMAP
 
 ### Timeline Overview
 
@@ -560,7 +564,7 @@ Year 3: Market Leadership
 
 ---
 
-## 8. NEXT STEPS
+## NEXT STEPS
 
 ### For Technical Team
 

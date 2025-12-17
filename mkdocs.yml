@@ -1,0 +1,31 @@
+site_name: B2B Wholesale Distribution Platform
+
+docs_dir: .
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: README.md
+  - Project Summary: PROJECT_SUMMARY.md
+  - NextGen Enterprise Summary: NEXTGEN_ENTERPRISE_SPEC_SUMMARY.md
+  - Documentation:
+      - Getting Started: docs/GETTING_STARTED.md
+      - Sitemap: docs/SITEMAP.md
+      - Enterprise Product Spec: docs/ENTERPRISE_PRODUCT_SPEC.md
+      - Enterprise Roadmap: docs/ENTERPRISE_ROADMAP.md
+      - Architecture:
+          - System Architecture: docs/architecture/SYSTEM_ARCHITECTURE.md
+          - Scalability Roadmap: docs/architecture/SCALABILITY_ROADMAP.md
+      - Database Schema: docs/database/DATABASE_SCHEMA.md
+      - API Specifications: docs/api/API_SPECIFICATIONS.md
+      - Feature Specifications: docs/features/FEATURE_SPECIFICATIONS.md
+      - User Flows:
+          - User Journeys: docs/user-flows/USER_JOURNEYS.md
+          - Enterprise UX Flows: docs/user-flows/ENTERPRISE_UX_FLOWS.md
+      - UI/UX:
+          - Design System: docs/ui-ux/DESIGN_SYSTEM.md
+          - Enterprise UI System: docs/ui-ux/ENTERPRISE_UI_SYSTEM.md
+      - Security Specifications: docs/security/SECURITY_SPECIFICATIONS.md
+      - Business Model: docs/monetization/BUSINESS_MODEL.md
+      - Deployment Guide: docs/deployment/DEPLOYMENT_GUIDE.md

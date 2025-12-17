@@ -12,7 +12,7 @@
 
 ---
 
-## 1. API OVERVIEW
+## API OVERVIEW
 
 ### Base URL
 ```
@@ -40,7 +40,7 @@ Development: http://localhost:3000/api/v1
 
 ---
 
-## 2. AUTHENTICATION
+## AUTHENTICATION
 
 ### Authentication Methods
 
@@ -142,7 +142,7 @@ Refresh access token using refresh token.
 
 ---
 
-## 3. CORE ENDPOINTS
+## CORE ENDPOINTS
 
 ### 3.1 Products API
 
@@ -738,7 +738,7 @@ Create a review.
 
 ---
 
-## 4. DATA MODELS
+## DATA MODELS
 
 ### Standard Response Format
 
@@ -775,7 +775,7 @@ Create a review.
 
 ---
 
-## 5. ERROR HANDLING
+## ERROR HANDLING
 
 ### HTTP Status Codes
 
@@ -824,7 +824,7 @@ SYSTEM_003 - Database error
 
 ---
 
-## 6. RATE LIMITING
+## RATE LIMITING
 
 ### Rate Limit Tiers
 
@@ -858,7 +858,7 @@ X-RateLimit-Reset: 1640000000
 
 ---
 
-## 7. WEBHOOKS
+## WEBHOOKS
 
 ### Webhook Events
 
@@ -902,7 +902,7 @@ user.suspended
 
 ---
 
-## 8. BEST PRACTICES
+## BEST PRACTICES
 
 ### Pagination
 Always use pagination for list endpoints:
