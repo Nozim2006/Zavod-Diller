@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Sidebar from "@/components/Sidebar";
+import B2BHeader from "@/components/B2BHeader";
+import B2BSidebar from "@/components/B2BSidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "B2B Wholesale Distribution Platform",
-  description: "Enterprise-grade B2B wholesale platform documentation",
+  title: "WholesaleHub Pro - Enterprise B2B Distribution Platform",
+  description: "Enterprise-grade B2B wholesale platform connecting manufacturers with retailers",
 };
 
 export default function RootLayout({
@@ -18,17 +18,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} h-full`}>
-        <div className="min-h-screen bg-gray-50">
-          <Navigation />
-          <div className="flex">
-            <Sidebar />
-            <main className="flex-1 min-w-0">
-              <div className="max-w-4xl mx-auto px-4 py-8">
-                {children}
-              </div>
-            </main>
-          </div>
+      <body className={`${inter.className} h-full bg-gray-50`}>
+        {/* B2B Header */}
+        <B2BHeader />
+        
+        {/* Main Layout */}
+        <div className="flex h-[calc(100vh-4.5rem)]">
+          {/* Sidebar */}
+          <B2BSidebar />
+          
+          {/* Main Content */}
+          <main className="flex-1 overflow-y-auto">
+            {children}
+          </main>
         </div>
       </body>
     </html>

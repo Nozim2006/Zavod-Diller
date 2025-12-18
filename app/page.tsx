@@ -1,71 +1,60 @@
-import { getDocContent } from '@/lib/content';
-import Link from 'next/link';
+import DashboardKPICards from '@/components/DashboardKPICards';
+import DashboardCharts from '@/components/DashboardCharts';
+import RecentOrdersTable from '@/components/RecentOrdersTable';
+import TopProductsGrid from '@/components/TopProductsGrid';
+import AlertsPanel from '@/components/AlertsPanel';
 
-export default async function Home() {
-  const doc = await getDocContent('');
-
+export default function Dashboard() {
   return (
-    <div className="max-w-none">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mb-8">
-        <h1 className="text-4xl font-bold mb-4 text-white">
-          B2B Wholesale Distribution Platform
-        </h1>
-        <p className="text-xl text-blue-100 mb-6">
-          Enterprise-grade B2B wholesale platform connecting manufacturers with retailers
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <Link 
-            href="/docs/getting-started" 
-            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
-          >
-            Get Started
-          </Link>
-          <Link 
-            href="/docs/architecture/system-architecture" 
-            className="border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Architecture
-          </Link>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Page Header */}
+      <div className="mb-8">
+        <div className="flex justify-between items-center">
+          <div>
+            <h1 className="text-heading-1 font-bold text-gray-900">
+              Dashboard
+            </h1>
+            <p className="mt-2 text-body text-gray-600">
+              Welcome back! Here's what's happening with your wholesale operations today.
+            </p>
+          </div>
+          <div className="flex space-x-3">
+            <button className="btn-ghost">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Export
+            </button>
+            <button className="btn-primary">
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              New Order
+            </button>
+          </div>
         </div>
       </div>
 
-      <div 
-        className="markdown-content"
-        dangerouslySetInnerHTML={{ __html: doc.content }}
-      />
+      {/* KPI Cards */}
+      <DashboardKPICards />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
-          <h3 className="text-lg font-semibold mb-3">Core Features</h3>
-          <ul className="space-y-2 text-gray-600">
-            <li>• Multi-role authentication</li>
-            <li>• Product catalog management</li>
-            <li>• Order management system</li>
-            <li>• Payment processing</li>
-            <li>• Real-time analytics</li>
-          </ul>
+      {/* Charts and Analytics */}
+      <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2">
+          <DashboardCharts />
         </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
-          <h3 className="text-lg font-semibold mb-3">Technology Stack</h3>
-          <ul className="space-y-2 text-gray-600">
-            <li>• React 18+ with TypeScript</li>
-            <li>• Next.js 14+ for SSR/SSG</li>
-            <li>• TailwindCSS + shadcn/ui</li>
-            <li>• Node.js/Express backend</li>
-            <li>• PostgreSQL database</li>
-          </ul>
+        <div className="lg:col-span-1">
+          <AlertsPanel />
         </div>
+      </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-sm border">
-          <h3 className="text-lg font-semibold mb-3">Documentation</h3>
-          <ul className="space-y-2 text-gray-600">
-            <li>• <Link href="/docs/enterprise-product-spec" className="text-blue-600 hover:underline">Product Spec</Link></li>
-            <li>• <Link href="/docs/user-flows/user-journeys" className="text-blue-600 hover:underline">User Journeys</Link></li>
-            <li>• <Link href="/docs/api/specifications" className="text-blue-600 hover:underline">API Documentation</Link></li>
-            <li>• <Link href="/docs/deployment/guide" className="text-blue-600 hover:underline">Deployment Guide</Link></li>
-            <li>• <Link href="/docs/security/specifications" className="text-blue-600 hover:underline">Security</Link></li>
-          </ul>
+      {/* Bottom Section */}
+      <div className="mt-8 grid grid-cols-1 xl:grid-cols-3 gap-6">
+        <div className="xl:col-span-2">
+          <RecentOrdersTable />
+        </div>
+        <div className="xl:col-span-1">
+          <TopProductsGrid />
         </div>
       </div>
     </div>
