@@ -4,7 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const navigationItems = [
+interface NavigationItem {
+  title: string;
+  href?: string;
+  items?: NavigationItem[];
+}
+
+const navigationItems: NavigationItem[] = [
   {
     title: "Home",
     href: "/",
@@ -103,7 +109,7 @@ const navigationItems = [
   },
 ];
 
-function NavItem({ item, level = 0 }: { item: any; level?: number }) {
+function NavItem({ item, level = 0 }: { item: NavigationItem; level?: number }) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(level === 0);
 
@@ -113,17 +119,30 @@ function NavItem({ item, level = 0 }: { item: any; level?: number }) {
   return (
     <div>
       <div className="flex items-center">
-        <Link
-          href={item.href}
-          className={`flex-1 px-2 py-1 text-sm rounded-md transition-colors ${
-            isActive
-              ? "bg-blue-100 text-blue-900 font-medium"
-              : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-          }`}
-          style={{ paddingLeft: `${8 + level * 16}px` }}
-        >
-          {item.title}
-        </Link>
+        {item.href ? (
+          <Link
+            href={item.href}
+            className={`flex-1 px-2 py-1 text-sm rounded-md transition-colors ${
+              isActive
+                ? "bg-blue-100 text-blue-900 font-medium"
+                : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            }`}
+            style={{ paddingLeft: `${8 + level * 16}px` }}
+          >
+            {item.title}
+          </Link>
+        ) : (
+          <span
+            className={`flex-1 px-2 py-1 text-sm rounded-md transition-colors ${
+              isActive
+                ? "bg-blue-100 text-blue-900 font-medium"
+                : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            }`}
+            style={{ paddingLeft: `${8 + level * 16}px` }}
+          >
+            {item.title}
+          </span>
+        )}
         {hasChildren && (
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -142,8 +161,13 @@ function NavItem({ item, level = 0 }: { item: any; level?: number }) {
       </div>
       {hasChildren && isOpen && (
         <div className="mt-1">
-          {item.items.map((child: any) => (
-            <NavItem key={child.href} item={child} level={level + 1} />
+          {item.items!.map((child: NavigationItem, idx: number) => (
+            // use a stable fallback key when href is missing
+            <NavItem
+              key={child.href ?? `${item.title.replace(/\s+/g, "-").toLowerCase()}-${level}-${idx}`}
+              item={child}
+              level={level + 1}
+            />
           ))}
         </div>
       )}
